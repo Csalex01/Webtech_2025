@@ -51,6 +51,10 @@ Ez a fájl biztosítja az adatbázis szinkronizálását. A `force` paraméter b
 
 Ez a kód arra szolgál, hogy kiírja a különböző modellekhez tartozó metódusokat a Sequelize ORM használatával. A kód minden egyes modellel végrehajt egy lekérdezést, majd kiírja a modellek prototípusában elérhető metódusokat.
 
+# query.js
+
+Ez a fájl egy példát ad az adatbázisból való lekérdezésre, ez esetben lekérdezzük a létező összes felhasználót. Ezek mellett a felhasználóhoz tartozó posztokat illetve kommenteket. Ezt az `include` tömb megadásával tudjuk elérni.
+
 # Fontos megjegyzések
 
 Amikor több-a-többhöz kapcsolatot definiálunk egy modellben, a Sequelize automatikusan létrehozza a szükséges `set`, `add`, `remove`, `create`, illetve `count` metódusokat.
