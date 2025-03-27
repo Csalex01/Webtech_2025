@@ -25,6 +25,7 @@ app.use(express.static(path.join(__dirname, "public")))
 app.use(expressLayouts);
 app.set("layout", "layout"); // Default layout file
 
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json())
 
 app.use("/", homeRouter);

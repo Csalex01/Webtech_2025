@@ -1,14 +1,55 @@
-<h1>
-  <%= post.title %>
-</h1>
-<p>
-  <%= post.content %>
-</p>
-<h2>Comments:</h2>
+<!-- This is the post show page (show.ejs) -->
+
+<h3><%= post.title %></h3>
+
+By: <strong><%= post.user.name %></strong>
+
+<hr>
+
+<p><%= post.content %></p>
+
+<strong>Categories:</strong>
 <ul>
-  <% post.comments.forEach(comment=> { %>
-    <li><a href="/comments/<%= comment.id %>">
-        <%= comment.content %>
-      </a>
-      <% }); %>
+    <% post.categories.forEach(category => { %>
+        <li><%= category.name %></li>
+    <% }) %>
 </ul>
+
+<hr>
+
+<!-- Display Comments -->
+<h4>Comments</h4>
+<% if (post.comments.length === 0) { %>
+    <p>No comments yet.</p>
+<% } else { %>
+    <ul style="list-style: none;">
+        <% post.comments.forEach(comment => { %>
+            <li class="mb-2">
+                <strong>@ <%= comment.user.name %>:</strong> <%= comment.content %>
+            </li>
+        <% }) %>
+    </ul>
+<% } %>
+
+<hr>
+
+<!-- Form to add a new comment -->
+<h5>Add a Comment</h5>
+<form action="/posts/<%= post.id %>/comments" method="POST">
+    <div class="mb-3">
+        <label for="userId" class="form-label">Assign User</label>
+        <select class="form-select" name="userId" id="userId" required>
+            <option value="">Select a User</option>
+            <% users.forEach(user => { %>
+                <option value="<%= user.id %>"><%= user.name %></option>
+            <% }) %>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="content" class="form-label">Comment</label>
+        <textarea class="form-control" name="content" id="content" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Comment</button>
+</form>
