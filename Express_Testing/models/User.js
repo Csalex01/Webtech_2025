@@ -1,5 +1,5 @@
 const { Sequelize, DataTypes, Model } = require("sequelize")
-const sequelize = require("../database")
+const sequelize = require("../config/database")
 
 class User extends Model {}
 
@@ -21,6 +21,9 @@ User.init(
             allowNull: false,
             unique: true
         }
+    }, {
+        sequelize,
+        modelName: "user"
     }
 )
 

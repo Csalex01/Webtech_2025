@@ -1,25 +1,33 @@
-const { DataTypes } = require("sequelize");
-const sequelize = require("../database");
-const Post = require("./Post");
+const { Sequelize, DataTypes, Model } = require("sequelize");
+const sequelize = require("../config/database");
 
-const PostCategory = sequelize.define("PostCategory", {}, { timestamps: false })
+class Category extends Model {}
 
-const Category = sequelize.define("Category", {
-    id: {
-        type: DataTypes.INTEGER,
-        autoIncrement: true,
-        primaryKey: true
-    },
-
-    name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        unique: true
+Category.init({
+    name: { 
+        type: DataTypes.STRING, 
+        allowNull: false 
     }
-})
+}, { 
+    sequelize, 
+    modelName: "category" 
+});
 
+class PostCategory extends Model {}
 
-Post.belongsToMany(Category, { through: PostCategory });
-Category.belongsToMany(Post, { through: PostCategory });
+PostCategory.init({
+    postId: { 
+        type: DataTypes.INTEGER, 
+        allowNull: false 
+    },
+    categoryId: { 
+        type: DataTypes.INTEGER, 
+        allowNull: false 
+    }
+}, { 
+    sequelize, 
+    modelName: "post_category",
+    timestamps: false
+});
 
 module.exports = { Category, PostCategory };

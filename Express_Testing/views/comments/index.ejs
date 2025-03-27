@@ -1,0 +1,10 @@
+<h1>All Comments</h1>
+<ul>
+    <% comments.forEach(comment => { %>
+      <li>
+        <a href="/comments/<%= comment.id %>">
+          <%= comment.content %>
+        </a>
+      </li>
+    <% }); %>
+  </ul>

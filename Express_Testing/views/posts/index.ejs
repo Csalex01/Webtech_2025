@@ -1,0 +1,23 @@
+<ul style="list-style: none;">
+    <% posts.forEach(post => { %>
+        <li>
+            <h3><%= post.title %></h3>
+            <p><%= post.content %></p>
+
+            <strong>Categories:</strong>
+            <ul>
+                <% post.categories.forEach(category => { %>
+                    <li><%= category.name %></li>
+                <% }) %>
+            </ul>
+            
+            <br>
+            
+            <!-- Button to redirect to comments for this post -->
+            <form action="/posts/<%= post.id %>" method="GET">
+                <button class="btn btn-secondary" type="submit">View Post</button>
+            </form>
+        </li>
+        <hr>
+    <% }) %>
+</ul>

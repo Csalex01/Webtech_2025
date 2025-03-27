@@ -2,7 +2,7 @@ const { Sequelize } = require("sequelize")
 
 const sequelize = new Sequelize({
     dialect: "sqlite",
-    storage: "../database/db.sqlite",
+    storage: "./db/database.sqlite",
     logging: false
 })
 
@@ -10,12 +10,12 @@ const testConnection = async () => {
     try {
 
         await sequelize.authenticate()
-        console.log("Connected to database successfully.")
+        console.log("✅> Connected to database successfully.")
 
     }
 
     catch(error) {
-        console.error(`Error while connecting to database: ${error}`)
+        console.error(`❌> Error while connecting to database: ${error}`)
     }
 }
 

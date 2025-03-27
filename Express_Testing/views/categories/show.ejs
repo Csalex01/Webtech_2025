@@ -1,0 +1,7 @@
+<h1>Category: <%= category.name %></h1>
+<h2>Posts in this Category:</h2>
+<ul>
+    <% category.posts.forEach(post => { %>
+        <li><%= post.title %></li>
+    <% }); %>
+</ul>
