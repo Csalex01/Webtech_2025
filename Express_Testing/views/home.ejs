@@ -6,44 +6,43 @@
 
 <!-- Search Form -->
 <form action="/" method="GET" onsubmit="return validateSearch()">
-    <input style="width: 300px; display: inline;" class="form-control" type="text" name="query" id="searchQuery" placeholder="Enter search term..." value="<%= searchQuery %>" required>
-    
-    <select style="width: 150px; display: inline;" class="form-select" name="table">
-        <option value="users" <%= table === "users" ? "selected" : "" %>>Users</option>
-        <option value="posts" <%= table === "posts" ? "selected" : "" %>>Posts</option>
-        <option value="comments" <%= table === "comments" ? "selected" : "" %>>Comments</option>
-        <option value="categories" <%= table === "categories" ? "selected" : "" %>>Categories</option>
-    </select>
+  <input style="width: 300px; display: inline;" class="form-control" type="text" name="query" id="searchQuery"
+    placeholder="Enter search term..." value="<%= searchQuery %>" required>
 
-    <button class="btn btn-secondary" type="submit">Search</button>
+  <select style="width: 150px; display: inline;" class="form-select" name="table">
+    <option value="users" <%=table==="users" ? "selected" : "" %>>Users</option>
+    <option value="posts" <%=table==="posts" ? "selected" : "" %>>Posts</option>
+    <option value="comments" <%=table==="comments" ? "selected" : "" %>>Comments</option>
+    <option value="categories" <%=table==="categories" ? "selected" : "" %>>Categories</option>
+  </select>
+
+  <button class="btn btn-secondary" type="submit">Search</button>
 </form>
 
 <h2>Results</h2>
 
-<% if (results.length > 0) { %>
-    <ul>
-        <% results.forEach(result => { %>
-            <li>
-                <a href="/<%= table %>/<%= result.id %>">
-                    <%= table === "users" ? result.name + " (" + result.email + ")" : 
-                        table === "posts" ? result.title : 
-                        table === "comments" ? result.content.substring(0, 50) + "..." : 
-                        result.name %>
-                </a>
-            </li>
-        <% }); %>
-    </ul>
-<% } else { %>
+<% if (results.length> 0) { %>
+  <ul>
+    <% results.forEach(result=> { %>
+      <li>
+        <a href="/<%= table %>/<%= result.id %>">
+          <%= table==="users" ? result.name + " (" + result.email + ")" : table==="posts" ? result.title :
+            table==="comments" ? result.content.substring(0, 50) + "..." : result.name %>
+        </a>
+      </li>
+      <% }); %>
+  </ul>
+  <% } else { %>
     <p>No results found.</p>
-<% } %>
+    <% } %>
 
-<script>
-    function validateSearch() {
-        const query = document.getElementById("searchQuery").value.trim();
-        if (!query) {
+      <script>
+        function validateSearch() {
+          const query = document.getElementById("searchQuery").value.trim();
+          if (!query) {
             alert("Please enter a search term.");
             return false; // Prevent form submission
+          }
+          return true;
         }
-        return true;
-    }
-</script>
+      </script>

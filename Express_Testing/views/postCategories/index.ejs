@@ -1,9 +1,9 @@
 <h1>All Post-Category Relationships</h1>
 <ul>
-    <% postCategories.forEach(postCategory => { %>
-        <li>
-            Post: <%= postCategory.post.title %> - Category: <%= postCategory.category.name %>
-            <a href="/postCategories/<%= postCategory.id %>">View Details</a>
-        </li>
+  <% postCategories.forEach(postCategory=> { %>
+    <li>
+      Post: <%= postCategory.post.title %> - Category: <%= postCategory.category.name %>
+          <a href="/postCategories/<%= postCategory.id %>">View Details</a>
+    </li>
     <% }); %>
 </ul>

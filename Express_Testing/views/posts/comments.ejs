@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comments for <%= post.title %></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comments for <%= post.title %>
+  </title>
 </head>
+
 <body>
-    <h1>Comments for <%= post.title %></h1>
+  <h1>Comments for <%= post.title %>
+  </h1>
 
-    <p><%= post.content %></p>
+  <p>
+    <%= post.content %>
+  </p>
 
-    <h3>Categories:</h3>
-    <ul>
-        <% post.categories.forEach(category => { %>
-            <li><%= category.name %></li>
-        <% }) %>
-    </ul>
+  <h3>Categories:</h3>
+  <ul>
+    <% post.categories.forEach(category=> { %>
+      <li>
+        <%= category.name %>
+      </li>
+      <% }) %>
+  </ul>
 
-    <h3>Comments:</h3>
-    <ul>
-        <% post.comments.forEach(comment => { %>
-            <li><%= comment.content %></li>
-        <% }) %>
-    </ul>
+  <h3>Comments:</h3>
+  <ul>
+    <% post.comments.forEach(comment=> { %>
+      <li>
+        <%= comment.content %>
+      </li>
+      <% }) %>
+  </ul>
 
-    <a href="/posts">Back to Posts</a>
+  <a href="/posts">Back to Posts</a>
 </body>
+
 </html>
