@@ -28,13 +28,12 @@ router.get("/:id", async (req, res) => {
 });
 
 router.post('/create', async (req, res) => {
-  const { name, username, email } = req.body;
+  const { name, email } = req.body;
 
   try {
       // Create the new user
       await User.create({
           name,
-          username,
           email
       });
 
