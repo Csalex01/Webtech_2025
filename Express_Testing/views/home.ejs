@@ -10,39 +10,57 @@
     placeholder="Enter search term..." value="<%= searchQuery %>" required>
 
   <select style="width: 150px; display: inline;" class="form-select" name="table">
-    <option value="users" <%=table==="users" ? "selected" : "" %>>Users</option>
-    <option value="posts" <%=table==="posts" ? "selected" : "" %>>Posts</option>
-    <option value="comments" <%=table==="comments" ? "selected" : "" %>>Comments</option>
-    <option value="categories" <%=table==="categories" ? "selected" : "" %>>Categories</option>
+    <option value="users" <%= table === "users" ? "selected" : "" %>>Users</option>
+    <option value="posts" <%= table === "posts" ? "selected" : "" %>>Posts</option>
+    <option value="comments" <%= table === "comments" ? "selected" : "" %>>Comments</option>
+    <option value="categories" <%= table === "categories" ? "selected" : "" %>>Categories</option>
   </select>
 
   <button class="btn btn-secondary" type="submit">Search</button>
 </form>
 
+<hr>
+
 <h2>Results</h2>
 
-<% if (results.length> 0) { %>
-  <ul>
-    <% results.forEach(result=> { %>
-      <li>
-        <a href="/<%= table %>/<%= result.id %>">
-          <%= table==="users" ? result.name + " (" + result.email + ")" : table==="posts" ? result.title :
-            table==="comments" ? result.content.substring(0, 50) + "..." : result.name %>
-        </a>
-      </li>
+<% if (results.length > 0) { %>
+  <!-- Table to Display Results -->
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name/Title</th>
+        <th>Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% results.forEach(result => { %>
+        <tr>
+          <td><%= result.id %></td>
+          <td>
+            <a href="/<%= table %>/<%= result.id %>">
+              <%= table === "users" ? result.name + " (" + result.email + ")" : table === "posts" ? result.title :
+                table === "comments" ? result.content.substring(0, 50) + "..." : result.name %>
+            </a>
+          </td>
+          <td>
+            <a href="/<%= table %>/<%= result.id %>" class="btn btn-info btn-sm">View</a>
+          </td>
+        </tr>
       <% }); %>
-  </ul>
-  <% } else { %>
-    <p>No results found.</p>
-    <% } %>
+    </tbody>
+  </table>
+<% } else { %>
+  <p>No results found.</p>
+<% } %>
 
-      <script>
-        function validateSearch() {
-          const query = document.getElementById("searchQuery").value.trim();
-          if (!query) {
-            alert("Please enter a search term.");
-            return false; // Prevent form submission
-          }
-          return true;
-        }
-      </script>
+<script>
+  function validateSearch() {
+    const query = document.getElementById("searchQuery").value.trim();
+    if (!query) {
+      alert("Please enter a search term.");
+      return false; // Prevent form submission
+    }
+    return true;
+  }
+</script>

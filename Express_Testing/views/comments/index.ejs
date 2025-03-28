@@ -1,10 +1,37 @@
-<h1>All Comments</h1>
-<ul>
-  <% comments.forEach(comment=> { %>
-    <li>
-      <a href="/comments/<%= comment.id %>">
-        <%= comment.content %>
-      </a>
-    </li>
-    <% }); %>
-</ul>
+<!-- views/comments/index.ejs -->
+
+<h3>All Comments</h3>
+
+<hr>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Associated Post</th>
+      <th>User</th>
+      <th>Comment</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% comments.forEach(comment => { %>
+      <tr>
+        <td><a href="/posts/<%= comment.post.id %>"><%= comment.post.title.length > 50 ? comment.post.title.slice(0, 30) + '...' : comment.post.title %></a></td>
+        <td><a href="/users/<%= comment.user.id %>"><%= comment.user.name %></a></td>
+        <td><%= comment.content %></td>
+        <td>
+          <!-- View Button -->
+          <a href="/comments/<%= comment.id %>" class="btn btn-info btn-sm">View</a>
+
+          <!-- Modify Button -->
+          <a href="/comments/<%= comment.id %>/edit" class="btn btn-warning btn-sm">Modify</a>
+
+          <!-- Delete Button -->
+          <form action="/comments/<%= comment.id %>/delete" method="POST" style="display: inline;">
+            <button type="submit" class="btn btn-danger btn-sm" onclick="confirm('Are you sure you want to delete this comment?')">Delete</button>
+          </form>
+        </td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>

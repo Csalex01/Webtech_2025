@@ -1,0 +1,11 @@
+<!-- views/comments/edit.ejs -->
+<h3>Edit Comment</h3>
+<form action="/comments/<%= comment.id %>/edit" method="POST">
+    <div class="mb-3">
+        <label for="content" class="form-label">Comment</label>
+        <textarea class="form-control" name="content" id="content" required><%= comment.content %></textarea>
+    </div>
+    <button type="submit" class="btn btn-warning">Update Comment</button>
+</form>
+
+<a href="/comments" class="btn btn-primary">Back to Comments</a>

@@ -1,0 +1,28 @@
+<h1>Edit Post</h1>
+
+<form action="/posts/<%= post.id %>/update" method="POST">
+    <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input class="form-control" type="text" name="title" id="title" value="<%= post.title %>" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="content" class="form-label">Content</label>
+        <textarea class="form-control" name="content" id="content" required><%= post.content %></textarea>
+    </div>
+
+    <div class="mb-3">
+        <label for="categories" class="form-label">Categories</label>
+        <div>
+            <% categories.forEach(category => { %>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="categories[]" value="<%= category.id %>"
+                    <% if (post.categories.some(postCategory => postCategory.id === category.id)) { %> checked <% } %> >
+                    <label class="form-check-label" for="categories"><%= category.name %></label>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update Post</button>
+</form>
