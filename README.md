@@ -25,6 +25,13 @@ Modellek
 11. [models/User.js](./docs/Fájlok%20magyarázata/models_User.js.md)
 12. [models/index.js](./docs/Fájlok%20magyarázata/models_index.js.md)
 
+Útvonalak
+
+13. [routes/categories.js](./docs/Fájlok%20magyarázata/routes_categories.js.md)
+14. [routes/comments.js](./docs/Fájlok%20magyarázata/routes_comments.js.md)
+15. [routes/home.js](./docs/Fájlok%20magyarázata/routes_home.js.md)
+16. [routes/posts.js](./docs/Fájlok%20magyarázata/routes_posts.js.md)
+
 ## Szerver indítása
 
 Az Express szerver futtatása a következő parancs segítségével történik:
@@ -36,9 +43,18 @@ Amennyiben változtatni akarunk a fájlokon és nem akarjuk manuálisan újraind
 $ nodemon server.js
 ```
 
+Ha ez megtörtént akkor a webapplikációt eltudjuk érni a következő címen:
+```
+http://localhost:3000
+```
+vagy
+```
+http://127.0.0.1:3000
+```
+
 ## Adatbázis létrehozása
 
-Az adatbázist a következőképpen hozzuk létre:
+Az adatbázist a következő parancs futtatásával hozzuk létre:
 ```bash
 $ node seed.js
 ```
@@ -70,7 +86,6 @@ A webapplikáció struktúrája a következő:
   - `comments/`
   - `partials/`: Részleges nézetek
     - `navbar.ejs`: Navigációs menü
-  - `postCategories/`
   - `posts/`
     - `omments.ejs`: Kommentek megjelenítése
   - `users/`

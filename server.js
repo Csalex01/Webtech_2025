@@ -8,7 +8,6 @@ const usersRouter = require("./routes/users");
 const postsRouter = require("./routes/posts");
 const commentsRouter = require("./routes/comments");
 const categoriesRouter = require("./routes/categories");
-const postCategoriesRouter = require("./routes/postCategories");
 
 const app = express()
 const PORT = 3000
@@ -33,6 +32,5 @@ app.use("/users", usersRouter);
 app.use("/posts", postsRouter);
 app.use("/comments", commentsRouter);
 app.use("/categories", categoriesRouter);
-app.use("/postCategories", postCategoriesRouter);
 
 app.listen(PORT, () => console.log(`✅> Server running on PORT ${PORT}.`))
