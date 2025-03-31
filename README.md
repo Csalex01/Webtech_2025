@@ -1,5 +1,7 @@
 # Sequelize integrálása Express webapplikációval
 
+<img src="./public/images/logo.jpg" style="width: auto; height: 200px;" />
+
 ## Tartalomjegyzék
 
 ### Sequelize
