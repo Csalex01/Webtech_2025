@@ -33,6 +33,7 @@ Modellek
 14. [routes/comments.js](./docs/Fájlok%20magyarázata/routes_comments.js.md)
 15. [routes/home.js](./docs/Fájlok%20magyarázata/routes_home.js.md)
 16. [routes/posts.js](./docs/Fájlok%20magyarázata/routes_posts.js.md)
+17. [routes/users.js](./docs/Fájlok%20magyarázata/routes_users.js.md)
 
 ## Szerver indítása
 
