@@ -25,9 +25,27 @@ Modellek
 11. [models/User.js](./docs/Fájlok%20magyarázata/models_User.js.md)
 12. [models/index.js](./docs/Fájlok%20magyarázata/models_index.js.md)
 
-## Program struktúrája
+## Szerver indítása
 
-A program struktúrája a következő:
+Az Express szerver futtatása a következő parancs segítségével történik:
+```bash
+$ node server.js
+```
+Amennyiben változtatni akarunk a fájlokon és nem akarjuk manuálisan újraindítani a szervert, a `nodemon` lehetőséget ad automatikus újraindításra:
+```bash
+$ nodemon server.js
+```
+
+## Adatbázis létrehozása
+
+Az adatbázist a következőképpen hozzuk létre:
+```bash
+$ node seed.js
+```
+
+## Webapplikáció struktúrája
+
+A webapplikáció struktúrája a következő:
 
 - `config/`: Konfigurációs fájlok
   - `database.js`: Adatbázis konfigurációjának meghatározása
