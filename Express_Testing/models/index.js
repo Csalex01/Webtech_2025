@@ -3,9 +3,8 @@ const sequelize = require("../config/database");
 const User = require("./User");
 const Post = require("./Post");
 const Comment = require("./Comment");
-const { Category, PostCategory } = require("./Category");  // Ensure correct export
+const { Category, PostCategory } = require("./Category"); 
 
-// Define Associations
 User.hasMany(Post, { foreignKey: "userId", onDelete: "CASCADE" });
 Post.belongsTo(User, { foreignKey: "userId", onDelete: "CASCADE" });
 

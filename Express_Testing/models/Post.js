@@ -21,8 +21,4 @@ Post.init({
   modelName: "post"
 });
 
-const { Category, PostCategory } = require("./Category");
-
-Post.belongsToMany(Category, { through: PostCategory, foreignKey: "postId" });
-
 module.exports = Post;
