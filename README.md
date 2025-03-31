@@ -35,6 +35,13 @@ Modellek
 16. [routes/posts.js](./docs/Fájlok%20magyarázata/routes_posts.js.md)
 17. [routes/users.js](./docs/Fájlok%20magyarázata/routes_users.js.md)
 
+Nézetek
+
+18. [views/categories](./docs/Fájlok%20magyarázata/views_categories.md) 
+19. [views/comments](./docs/Fájlok%20magyarázata/views_comments.md)
+20. [views/partials](./docs/Fájlok%20magyarázata/views_partials.md)
+21. [views/posts](./docs/Fájlok%20magyarázata/views_posts.md)
+
 ## Szerver indítása
 
 Az Express szerver futtatása a következő parancs segítségével történik:
