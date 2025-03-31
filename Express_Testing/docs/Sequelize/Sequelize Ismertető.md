@@ -1,5 +1,9 @@
 # Sequelize ismertető
 
+A Sequelize dokumentációja:
+- [Getting Started](https://sequelize.org/docs/v6/getting-started/)
+- [API Reference](https://sequelize.org/api/v6/identifiers)
+
 ## Mi az a Sequelize?
 
 A Sequelize egy Node.js ORM (Object-Relational Mapping) eszköz, amelyet SQL alapú adatbázisok kezelésére használnak. Segítségével egyszerűbbé válik az adatbázisokkal való munka, mivel JavaScript objektumok formájában kezelhetjük az adatokat SQL lekérdezések helyett.
