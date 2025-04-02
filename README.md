@@ -15,11 +15,11 @@
 
 ### Fájlok magyarázata
 
-Konfigurációs fájlok
+#### Konfigurációs fájlok
 
 7. [config/database.js](./docs/Fájlok%20magyarázata/config_database.js.md)
 
-Modellek
+#### Modellek
 
 8. [models/Category.js](./docs/Fájlok%20magyarázata/models_Category.js.md)
 9. [models/Comment.js](./docs/Fájlok%20magyarázata/models_Comment.js.md)
@@ -27,7 +27,7 @@ Modellek
 11. [models/User.js](./docs/Fájlok%20magyarázata/models_User.js.md)
 12. [models/index.js](./docs/Fájlok%20magyarázata/models_index.js.md)
 
-Útvonalak
+#### Útvonalak
 
 13. [routes/categories.js](./docs/Fájlok%20magyarázata/routes_categories.js.md)
 14. [routes/comments.js](./docs/Fájlok%20magyarázata/routes_comments.js.md)
@@ -35,12 +35,21 @@ Modellek
 16. [routes/posts.js](./docs/Fájlok%20magyarázata/routes_posts.js.md)
 17. [routes/users.js](./docs/Fájlok%20magyarázata/routes_users.js.md)
 
-Nézetek
+#### Nézetek
 
 18. [views/categories](./docs/Fájlok%20magyarázata/views_categories.md) 
 19. [views/comments](./docs/Fájlok%20magyarázata/views_comments.md)
 20. [views/partials](./docs/Fájlok%20magyarázata/views_partials.md)
 21. [views/posts](./docs/Fájlok%20magyarázata/views_posts.md)
+22. [views/users](./docs/Fájlok%20magyarázata/views_users.md)
+23. [views/home](./docs/Fájlok%20magyarázata/views_home.md)
+24. [views/layout](./docs/Fájlok%20magyarázata/views_layout.md)
+
+#### Bootstrap
+
+25. [Bootstrap bevezező](./docs/Bootstrap/Bootstrap_Bevezető.md)
+26. [Fontosabb osztályok](./docs/Bootstrap/Bootstrap_Fontosabb_Osztályok.md)
+27. [Navigációs sáv (Navbar)](./docs/Bootstrap/Bootstrap_Navbar.md)
 
 ## Szerver indítása
 
