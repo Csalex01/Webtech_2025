@@ -32,77 +32,81 @@
 
 ### Fájlok magyarázata
 
+### Entity Relationship Diagram (Egyed-Kapcsolat Diagram)
+
+9. **[ER Diagram](./docs/Sequelize/db_diagram.png)**
+
 #### Konfigurációs fájlok
 
-9. **[config/database.js](./docs/Fájlok%20magyarázata/config_database.js.md)**  
+10. **[config/database.js](./docs/Fájlok%20magyarázata/config_database.js.md)**  
    A konfigurációs fájl, amely az adatbázis kapcsolati beállításait tartalmazza, beleértve a felhasználónevet, jelszót és az adatbázis típusát.
 
 #### Modellek
 
-10. **[models/Category.js](./docs/Fájlok%20magyarázata/models_Category.js.md)**  
+11. **[models/Category.js](./docs/Fájlok%20magyarázata/models_Category.js.md)**  
    A `Category` modell, amely a kategóriák tábláját reprezentálja az adatbázisban, és a kapcsolódó műveleteket tartalmazza.
 
-11. **[models/Comment.js](./docs/Fájlok%20magyarázata/models_Comment.js.md)**  
+12. **[models/Comment.js](./docs/Fájlok%20magyarázata/models_Comment.js.md)**  
    A `Comment` modell, amely a hozzászólások tábláját reprezentálja, és tartalmazza az ezekhez kapcsolódó műveleteket.
 
-12. **[models/Post.js](./docs/Fájlok%20magyarázata/models_Post.js.md)**  
+13. **[models/Post.js](./docs/Fájlok%20magyarázata/models_Post.js.md)**  
    A `Post` modell, amely a bejegyzéseket tároló táblát reprezentálja, és azok kezelésére szolgáló funkciókat tartalmaz.
 
-13. **[models/User.js](./docs/Fájlok%20magyarázata/models_User.js.md)**  
+14. **[models/User.js](./docs/Fájlok%20magyarázata/models_User.js.md)**  
    A `User` modell, amely a felhasználók adatait tárolja és a hozzájuk kapcsolódó műveleteket tartalmazza.
 
-14. **[models/index.js](./docs/Fájlok%20magyarázata/models_index.js.md)**  
+15. **[models/index.js](./docs/Fájlok%20magyarázata/models_index.js.md)**  
    A fájl, amely importálja és összekapcsolja az összes modellt, valamint inicializálja az adatbázis kapcsolatot.
 
 #### Útvonalak
 
-15. **[routes/categories.js](./docs/Fájlok%20magyarázata/routes_categories.js.md)**  
+16. **[routes/categories.js](./docs/Fájlok%20magyarázata/routes_categories.js.md)**  
    Az útvonalak, amelyek a kategóriák kezelésére szolgálnak, például új kategória létrehozása vagy kategória törlése.
 
-16. **[routes/comments.js](./docs/Fájlok%20magyarázata/routes_comments.js.md)**  
+17. **[routes/comments.js](./docs/Fájlok%20magyarázata/routes_comments.js.md)**  
    Az útvonalak a hozzászólások kezelésére, beleértve azok létrehozását és törlését.
 
-17. **[routes/home.js](./docs/Fájlok%20magyarázata/routes_home.js.md)**  
+18. **[routes/home.js](./docs/Fájlok%20magyarázata/routes_home.js.md)**  
    A főoldal útvonalai, amelyek az alapvető oldalletöltési logikát tartalmazzák.
 
-18. **[routes/posts.js](./docs/Fájlok%20magyarázata/routes_posts.js.md)**  
+19. **[routes/posts.js](./docs/Fájlok%20magyarázata/routes_posts.js.md)**  
    Az útvonalak, amelyek a bejegyzések kezelésére szolgálnak, például új bejegyzés létrehozása vagy bejegyzés megtekintése.
 
-19. **[routes/users.js](./docs/Fájlok%20magyarázata/routes_users.js.md)**  
+20. **[routes/users.js](./docs/Fájlok%20magyarázata/routes_users.js.md)**  
    Az útvonalak, amelyek a felhasználók kezelésére vonatkoznak, beleértve a regisztrációt, a profil szerkesztését és törlését.
 
 #### Nézetek
 
-20. **[views/categories](./docs/Fájlok%20magyarázata/views_categories.md)**  
+21. **[views/categories](./docs/Fájlok%20magyarázata/views_categories.md)**  
    A kategóriák megjelenítéséhez szükséges nézetek, amelyek a kategóriák listázását, létrehozását vagy módosítását tartalmazzák.
 
-21. **[views/comments](./docs/Fájlok%20magyarázata/views_comments.md)**  
+22. **[views/comments](./docs/Fájlok%20magyarázata/views_comments.md)**  
    A hozzászólások megjelenítéséhez szükséges nézetek, amelyek tartalmazzák a hozzászólások listázását és hozzáadását.
 
-22. **[views/partials](./docs/Fájlok%20magyarázata/views_partials.md)**  
+23. **[views/partials](./docs/Fájlok%20magyarázata/views_partials.md)**  
    A közös elemek (például fejlécek, láblécek, navigációs sávok) nézetei, amelyek az összes oldalra vonatkoznak.
 
-23. **[views/posts](./docs/Fájlok%20magyarázata/views_posts.md)**  
+24. **[views/posts](./docs/Fájlok%20magyarázata/views_posts.md)**  
    A bejegyzések megjelenítésére és kezelésére szolgáló nézetek, amelyek a bejegyzések részletezését és szerkesztését tartalmazzák.
 
-24. **[views/users](./docs/Fájlok%20magyarázata/views_users.md)**  
+25. **[views/users](./docs/Fájlok%20magyarázata/views_users.md)**  
    A felhasználói profilok megjelenítésére és kezelésére vonatkozó nézetek, például regisztráció, profil szerkesztés és törlés.
 
-25. **[views/home](./docs/Fájlok%20magyarázata/views_home.md)**  
+26. **[views/home](./docs/Fájlok%20magyarázata/views_home.md)**  
    A főoldal nézete, amely tartalmazza a weboldal fő tartalmát.
 
-26. **[views/layout](./docs/Fájlok%20magyarázata/views_layout.md)**  
+27. **[views/layout](./docs/Fájlok%20magyarázata/views_layout.md)**  
    A központi elrendezés, amely az alapvető HTML struktúrákat tartalmazza, és az oldal összes nézetéhez közös elemeket biztosít.
 
 #### Bootstrap
 
-27. **[Bootstrap bevezető](./docs/Bootstrap/Bootstrap_Bevezető.md)**  
+28. **[Bootstrap bevezető](./docs/Bootstrap/Bootstrap_Bevezető.md)**  
    A Bootstrap CSS keretrendszer bemutatása, alapvető jellemzők és előnyök ismertetése.
 
-28. **[Fontosabb osztályok](./docs/Bootstrap/Bootstrap_Fontosabb_Osztályok.md)**  
+29. **[Fontosabb osztályok](./docs/Bootstrap/Bootstrap_Fontosabb_Osztályok.md)**  
    A legfontosabb Bootstrap osztályok bemutatása, amelyek segítenek a dizájn és a felhasználói élmény gyors kialakításában.
 
-29. **[Navigációs sáv (Navbar)](./docs/Bootstrap/Bootstrap_Navbar.md)**  
+30. **[Navigációs sáv (Navbar)](./docs/Bootstrap/Bootstrap_Navbar.md)**  
    A Bootstrap navigációs sávjának részletes bemutatása, annak testreszabása és használata a weboldalon.
 
 ## Szerver indítása
